@@ -17,4 +17,15 @@ items.forEach(item => {
     categoriesNews.appendChild(allNewsCategories)
   });
 };
+
+const loadData = (details) => {
+  console.log(details)
+  const itemLength = document.getElementById('item-length')
+  itemLength.innerText = details.length + '    items found for this category'
+  itemLength.style.fontSize = "x-large"
+  itemLength.style.fontWeight = "500"
+  itemLength.style.borderStyle = "dotted solid double dashed"
+  if (details.length === 0) {
+    itemLength.innerText = 'No news found for this category'}
+}
 loadCategories()
